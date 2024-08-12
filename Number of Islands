@@ -1,0 +1,86 @@
+Number of Islands
+Given a matrix that consists of 1's and 0's, where 1 represents land and 0 represents water. The connected land surrounded by water is an island. The land can be connected in all 8 directions. Find the minimum of bridges required to connect all the Islands.
+
+Format:
+
+Input:
+
+The first line contains the size of the 2D matrix (N N - Represents an NxN matrix). The next line contains the elements of the 2D matrix.
+
+Output:
+
+The output consists of the number of islands.
+
+
+
+Example:
+
+Input:
+
+5 5
+
+1 1 0 0 0
+
+0 1 0 0 1
+
+1 0 0 1 1
+
+0 0 0 0 0
+
+1 0 1 1 0
+
+Output:
+
+4
+
+===============================================================================
+
+import java.util.*;
+class Main
+{
+    public static void island(int[][]arr,int i,int j,int m,int n)
+    {
+        if(i>=0 && i<m && j>=0 && j<n && arr[i][j]==1)
+        {
+
+
+            arr[i][j]=0;
+            island(arr,i+1,j,m,n);
+            island(arr,i,j+1,m,n);
+            island(arr,i-1,j,m,n);
+            island(arr,i,j-1,m,n);
+           island(arr,i+1,j+1,m,n);
+            island(arr,i-1,j-1,m,n);
+            island(arr,i-1,j+1,m,n);
+            island(arr,i+1,j-1,m,n);    
+
+
+    }
+    
+    }
+  public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+      int m=sc.nextInt();
+      int n=sc.nextInt();
+      int[][]arr=new int[m][n];
+      for(int i=0;i<m;i++)
+      {
+          for(int j=0;j<n;j++)
+          {
+              arr[i][j]=sc.nextInt();
+  }}
+      
+      int count=0;
+      for(int i=0;i<m;i++)
+      {
+          for(int j=0;j<n;j++)
+          {
+              if(arr[i][j]==1){
+                  //System.out.println(i+" "+j);
+                  island(arr,i,j,m,n);
+                  count++;
+          }}}
+    System.out.print(count-1);
+  }
+}
