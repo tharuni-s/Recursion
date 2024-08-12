@@ -1,0 +1,63 @@
+Permutation in sorted order - String input
+Given a string, print all its permutations in sorted order.
+
+Example 1:
+
+Input:
+
+eat
+
+Output:
+
+aet
+
+ate
+
+eat
+
+eta
+
+tae
+
+tea
+=====================================================================
+//permutation
+import java.util.*;
+class Main
+{
+  static ArrayList<String > s=new ArrayList<String>();
+  
+  public static void perm(char[] arr, int fi)
+  {
+    int n=arr.length;
+    if(fi==n-1)
+    {
+      s.add(new String(arr));
+      return;}
+    for(int i=fi;i<n;i++)
+    {
+      swap(arr,fi,i);
+      perm(arr,fi+1);
+      swap(arr, fi, i);
+    }
+      
+
+  }
+ public static void swap(char[] arr, int fi, int i)
+ {
+   char t=arr[fi];
+   arr[fi]=arr[i];
+   arr[i]=t;
+   
+ }
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+  String st=sc.next();
+    char [] arr=st.toCharArray();
+    perm(arr,0);
+    Collections.sort(s);
+   for(String  i: s)
+      System.out.println(i);
+  }
+}
