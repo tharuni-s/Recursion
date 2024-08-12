@@ -1,0 +1,39 @@
+Fact Digit Sum
+Let us define A(n) for positive integer N as a sum of factorials of its digits. For example, A(154) = 1!+ 5! +4! = 145. Given a number 'X', you need to print the minimum number L, such that A(L) = X. If no such L exists, then print -1.
+
+Format:
+
+Input:
+
+First-line contains 'T' - the number of test cases. Then each line contains an integer 'X'.
+
+Output:
+
+Print the answer for each value 'X'.
+
+Constraints:
+
+1 <= T <= 542
+
+1000 <= X <= 109
+
+Example 1:
+
+Input:
+
+1
+
+40321
+
+Output:
+
+18
+
+Explanations:
+
+A(18) = 1!+ 8! = 40321 and 18 is the smallest element for which A(18) is 40321.
+
+Note, that A(80) = A(81) is also 40321. Among them, 18 is the smallest number.
+
+=========================================================================================
+
