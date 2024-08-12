@@ -1,0 +1,42 @@
+Bacterial Infection
+You have a hospital with M X N number of rooms. Suddenly bacterial infection occurs in one of the rooms and it starts spreading in the North, South, West, East direction. It spreads only to its adjacent rooms, which are opened. Find how long would it take for the bacteria to spread to the entire hospital.
+
+Format:
+
+First-line contains two integers, M and N, separated by a space. which gives the size of the hospital in terms of the number of rows and columns respectively. The next M lines, where ith line containing N characters.
+
+Each of N characters is either o or c, giving the status of the room.
+
+The next line contains two integers X, Y, space-separated. That gives the coordinates of the first room that occurs bacteria.
+
+Output:
+
+The single integer indicating, the number of minutes taken for the bacteria. To spread to the entire hospital.
+
+
+
+Constraints:
+
+3 ≤ M ≤ 20 
+
+3 ≤ N ≤ 20
+
+
+
+Example:
+
+Input:
+
+3 4
+
+o c o c
+
+o o o o 
+
+c o o c
+
+1 2
+
+Output:
+
+4
