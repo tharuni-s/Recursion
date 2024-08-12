@@ -1,0 +1,49 @@
+Check whether a given String S is a palindrome using recursion. Return true or false.
+
+Input Format
+
+String S
+
+Constraints
+
+0 <= |S| <= 1000
+where |S| represents length of string S.
+Output Format
+
+true or false
+
+Sample Input 0
+
+racecar
+Sample Output 0
+
+true
+Sample Input 1
+
+face
+Sample Output 1
+
+false
+
+==============================================================
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+      String S = sc.next();
+        System.out.println(isPalindromeHelper(S, 0, S.length() - 1)); 
+    }
+
+    private static boolean isPalindromeHelper(String S, int left, int right) {
+        // Base case: If the pointers cross, it's a palindrome
+        if (left >= right) {
+            return true;
+        }
+        // Check if the characters at the current pointers are the same
+        if (S.charAt(left) != S.charAt(right)) {
+            return false;
+        }
+        // Recurse on the next pair of characters
+        return isPalindromeHelper(S, left + 1, right - 1);
+    }
+}
