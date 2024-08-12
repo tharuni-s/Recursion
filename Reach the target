@@ -1,0 +1,54 @@
+Reach the target
+Given four integers A, B, C, D. A represents the initial position of Neymar on the x-axis. In each step, Neymar can go to X+B or X-B, if he is standing at X. The task is to check if it is possible for Neymar to reach C exactly after the D steps.
+
+
+
+Format:
+
+Input:
+
+1. The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+
+2. The first line of each test case contains four space-separated integers A, B, C, and D.
+
+Output:
+
+For each test case, print "yes" if it is possible to reach C in exactly D steps. Otherwise, print "no" (without quotes).
+
+
+
+Constraints:
+
+1. 1 <= T <= 5
+
+2. -10^9 <= A, C <= 10^9
+
+3. 1 <= B <= 10^9
+
+4. 1 <= D <= 15
+
+
+
+Example:
+
+Input:
+
+3
+
+2 3 8 4
+
+-3 1 0 3
+
+-3 1 1 3
+
+Output:
+
+yes
+
+yes
+
+no
+
+Explanation:
+
+Test case 1: One of the possible ways is {2, 5, 8, 11, 8}.
