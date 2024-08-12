@@ -1,0 +1,40 @@
+Write a program to implement Tower of Hanoi.
+
+It consists of three rods and a number of disks of different sizes which can slide onto any rod.
+
+The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top.
+
+We have to obtain the same stack on the third rod.
+
+﻿Input Format:
+
+One line contain number of disks a(1 <= a <= 13).
+﻿Output Format:
+
+Sequence of moves throughout the process(for better understanding refer to sample output section).
+Sample Input:
+
+3
+Sample Output:
+
+The sequence of moves involved in the Tower of Hanoi are :
+
+1 A C
+
+2 A B
+
+1 C B
+
+3 A C
+
+1 B A
+
+2 B C
+
+1 A C
+
+
+
+Explanation : 1 A C Means - Move disk 1 from A to C.
+
+====================================================================
