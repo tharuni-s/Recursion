@@ -1,0 +1,28 @@
+Generate Parentheses
+Amy is experimenting with Parentheses. Given N pairs of parentheses, she wants to know how many combinations of well-formed parentheses exist. She also wants to print the well-formed valid combinations. Could you chip in and help with it?
+
+
+
+Format:
+
+Input:
+
+The input consists of an integer.
+
+Output:
+
+The output consists of valid parenthesis.
+
+
+
+Example:
+
+Input:
+
+2
+
+Output:
+
+(())
+
+()()
